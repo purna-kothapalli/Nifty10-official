@@ -1,0 +1,342 @@
+
+*{
+    box-sizing: border-box;
+}
+/* Header */
+.header {
+  background-image: url('../../assets/bg2-nifty.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+
+/* Sparkle / Glow Layer */
+.header::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 150%;
+  height: 150%;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for text readability */
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0.05), transparent); */
+  animation: moveBackground 12s linear infinite;
+  z-index: 0;
+}
+
+/* Overlay glow filter */
+.header-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.05), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes moveBackground {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-10%, -10%); }
+}
+
+.home-icon-container {
+  position: absolute;
+  top: 40px;
+  right: 130px;
+  z-index: 10;
+}
+
+/* Home Icon Base Style */
+.home-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  color: white;
+  font-size: 26px;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 0 15px rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Horizontal Lines */
+.home-icon::before,
+.home-icon::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  top: 50%;
+  transform: translateY(-50%) scaleX(1);
+  opacity: 0.5;
+  transition: all 0.4s ease;
+  border-radius: 1px;
+}
+
+.home-icon::before {
+  left: -70px;
+}
+
+.home-icon::after {
+  right: -70px;
+}
+
+/* Hover Effects */
+.home-icon:hover {
+  color: #e0aa3e;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #e0aa3e;
+  transform: scale(1.15) rotate(3deg);
+  box-shadow: 0 0 20px rgba(224, 170, 62, 0.6);
+}
+
+.home-icon:hover::before,
+.home-icon:hover::after {
+  width: 80px;
+  opacity: 1;
+  transform: translateY(-50%) scaleX(1.2);
+  background-color: #e0aa3e;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Pulse Glow Animation */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(224, 170, 62, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(224, 170, 62, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(224, 170, 62, 0.3);
+  }
+}
+
+
+.header-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.header-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.logo {
+  max-width: 140px;
+  margin-bottom: 50px;
+  /* animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)); */
+}
+
+.header-title {
+    margin-right: 21%;
+    font-size: 2.1rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #fef9c3; /* soft yellow for better contrast */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    text-align: left;
+    font-family: "Aclonica", sans-serif;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Spark animation on logo */
+/* .spark-animation {
+  animation: sparkle 2s ease-in-out infinite alternate;
+} */
+
+@keyframes sparkle {
+  from {
+    filter: drop-shadow(0 0 5px #60a5fa);
+  }
+  to {
+    filter: drop-shadow(0 0 15px #3b82f6);
+  }
+}
+
+h1.glow-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 0 auto 15px;
+  animation: glow 2s ease-in-out infinite alternate;
+  text-shadow: 0 0 8px #93c5fd;
+  line-height: 1.3;
+  max-width: 800px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #60a5fa, 0 0 30px #2563eb;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #60a5fa, 0 0 40px #2563eb;
+  }
+}
+ @media screen and (max-width: 768px) {
+  .home-icon-container {
+    display: none;
+  }
+}
+.subtitle {
+  font-size: 1.1rem;
+  color: #e0e7ff;
+  margin: 15px auto 30px;
+  max-width: 750px;
+}
+
+/* Input + Button */
+.input-group {
+  display: flex;
+  justify-content: left;
+  gap: 12px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.input-group input {
+  padding: 14px 18px;
+  border: none;
+  border-radius: 10px;
+  width: 260px;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.input-group button {
+  background-color: #e0aa3e;
+  color: #fff;
+  border: none;
+  padding: 14px 22px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.input-group .pulse-button {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+
+.input-group button:hover {
+  background-color: #926f34;
+  transform: scale(1.05);
+}
+
+/* Download Buttons */
+.download-buttons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.download-buttons img {
+  height: 55px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.download-buttons img:hover {
+  transform: scale(1.1);
+}
+
+.header-background {
+  position: relative;
+  top: 50%;
+  left: 90%;
+  transform: translateY(-50%);
+  border-radius: 0px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.header-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .hide-home-mobile {
+    display: none;
+  }
+  .header {
+  background-image: url('../../assets/bg2-nifty.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px 10px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+}

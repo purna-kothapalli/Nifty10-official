@@ -1,0 +1,225 @@
+.product-pricing-section {
+  max-width: 1200px;
+  margin: 1rem auto;
+  padding: 2rem 2.5rem;
+  background: #fff; /* pure white, no gradient */
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  user-select: none;
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+.product-pricing-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e0aa3e;
+  position: relative;
+  z-index: 2;
+}
+
+.product-pricing-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+  text-align: justify;
+  color: #444;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container for bids */
+.product-pricing-bids-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Colorful gradient cards with hover scale and shadow */
+.product-pricing-bid-card {
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 1.2rem 2rem;
+  border-radius: 14px;
+  cursor: pointer;
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  outline-offset: 3px;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Hover and focus effect */
+.product-pricing-bid-card:hover,
+.product-pricing-bid-card:focus {
+  transform: translateY(-8px) scale(1.08);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+/* Bid amount style */
+.product-pricing-bid-amount {
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+  font-weight: 900;
+  text-shadow: 0 0 8px rgba(0,0,0,0.25);
+  user-select: none;
+}
+
+/* Tag below amount */
+.product-pricing-bid-tag {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.3rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+  user-select: none;
+  transition: background 0.3s ease;
+}
+
+.product-pricing-bid-card:hover .product-pricing-bid-tag {
+  background: rgba(255, 255, 255, 0.45);
+  color: #222;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .product-pricing-bid-card {
+    width: 100px;
+    padding: 1rem 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  .product-pricing-title {
+    font-size: 2rem;
+  }
+
+  .product-pricing-description {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+}
+
+/* Decorative abstract shapes behind title */
+.product-pricing-section::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -50px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle at center, #e0aa3e33, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.product-pricing-section::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle at center, #6078ea33, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* Animated gradient underline below title */
+.product-pricing-title {
+  position: relative;
+  display: inline-block;
+}
+
+.product-pricing-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #e0aa3e, #e0aa3e);
+  background-size: 300% 100%;
+  animation: gradientSlide 4s linear infinite;
+  z-index: -1;
+}
+
+@keyframes gradientSlide {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+/* Light shadow/glow on description */
+.product-pricing-description {
+  text-shadow: 0 0 6px #ddd;
+}
+
+/* Floating effect for cards */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.product-pricing-bid-card {
+  animation: floatUpDown 6s ease-in-out infinite;
+}
+
+/* Accent dot near tag */
+.product-pricing-bid-tag {
+  position: relative;
+  padding-left: 1.4rem;
+}
+
+.product-pricing-bid-tag::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #fff;
+}
+
+/* Smooth fade-in for container */
+.product-pricing-section {
+  opacity: 0;
+  animation: fadeInSection 1s forwards ease-out;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+  }
+}

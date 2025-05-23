@@ -1,0 +1,64 @@
+.winners-list {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+.winners-list__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #c78f1e;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #e0aa3e;
+  padding-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.winners-list__steps,
+.winners-list__additional {
+  list-style-position: outside;
+  padding-left: 1.8rem;
+  margin-bottom: 2rem;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.winners-list__item,
+.winners-list__additional-item {
+  margin-bottom: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.winners-list__item p,
+.winners-list__additional-item {
+  margin: 0.3rem 0;
+}
+
+.winners-list__item strong {
+  color: #a57e00;
+}
+
+@media (max-width: 768px) {
+  .winners-list {
+    padding: 1rem 1.2rem;
+  }
+
+  .winners-list__heading {
+    font-size: 1.3rem;
+  }
+
+  .winners-list__steps,
+  .winners-list__additional {
+    font-size: 1rem;
+  }
+}
