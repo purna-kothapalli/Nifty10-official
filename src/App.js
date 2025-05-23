@@ -15,16 +15,12 @@ import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditons/TermsConditions';
 import PointSystem from './pages/PointSystem/PointSystem';
 import PdfViewer from './pages/PdfViewer/PdfViewer';
-<<<<<<< HEAD
 import PlayGuide from './pages/PlayGuide/PlayGuide';
-=======
->>>>>>> 1f811f2786f537453165dfaf2d6da86abd61bcff
 function App() {
   return (
     <Router>
       <div className="App">
         <Header />
-        
         <Routes>
           <Route path="*" element={<HomePage />} />
           <Route path="/about-us" element={<About />} />
@@ -38,12 +34,8 @@ function App() {
           <Route path="/help-desk" element={<HelpDesk />} />
           <Route path='/points-system' element={<PointSystem/>}/>
           <Route path='/legal-opinion-skilled-game' element={<PdfViewer/>}/>
-<<<<<<< HEAD
           <Route path='/play-guide' element={<PlayGuide/>}/>
-=======
->>>>>>> 1f811f2786f537453165dfaf2d6da86abd61bcff
         </Routes>
-        
         <Footer />
       </div>
     </Router>
