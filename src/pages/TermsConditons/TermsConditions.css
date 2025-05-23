@@ -1,0 +1,75 @@
+.terms-conditions{
+  width: 100%;
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 2rem 2.5rem;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.75;
+  border-left: 5px solid #e0aa3e;
+  background: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease-out;
+}
+.terms-conditions:hover {
+  border-color: #c78f1e;
+}
+
+.terms-header {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #e0aa3e;
+  margin-bottom: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+  border-bottom: 3px solid #e0aa3e;
+  padding-bottom: 0.3rem;
+}
+.terms-conditions-list {
+  list-style-type: decimal; /* shows numbers */
+  padding-left: 1.6rem; /* slightly increased to accommodate numbers */
+  margin-bottom: 2rem;
+}
+
+.terms-conditions-list-item {
+  font-size: 1.3rem;
+  color: #b27f1f;
+  margin: 2rem 0 1rem 0;
+  font-weight: 700;
+  text-align: left;
+  position: relative;
+  padding-bottom: 0.4rem;
+}
+
+.terms-conditions-list::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #e0aa3e 0%, #c78f1e 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 8px #e0aa3e80;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.decimal-sub-list {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+.decimal-sub-list .privacy-text {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+.roman-sub-list{
+  list-style-type: circle;
+    padding-left: 1.5rem;
+}
+.roman-sub-list .privacy-text {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}

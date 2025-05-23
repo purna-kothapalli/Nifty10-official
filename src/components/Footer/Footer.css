@@ -1,0 +1,163 @@
+.footer {
+  background-color: #0b1623;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.footer .highlight {
+  color: #e0aa3e;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #233446;
+  padding-bottom: 30px;
+}
+
+.footer-logo {
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+}
+
+.footer-logo img.footer-logo-img {
+  height: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.store-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.store-buttons img {
+  height: 55px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.store-buttons img:hover {
+  transform: scale(1.1);
+}
+
+.footer-links {
+  display: flex;
+  flex: 2;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 280px;
+  margin-top: 20px;
+}
+
+.footer-links h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 220px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.payment-partners img {
+  height: 40px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-icons a img {
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  padding: 20px;
+  color: #bbb;
+  font-size: 14px;
+  text-align: center;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Responsive Layouts */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo,
+  .footer-info {
+    text-align: center;
+  }
+
+  .store-buttons {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hide-links-mobile {
+    display: none !important;
+  }
+}
+

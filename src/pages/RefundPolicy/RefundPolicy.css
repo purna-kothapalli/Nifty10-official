@@ -1,0 +1,203 @@
+.refund-policy {
+  width: 100%;
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 2rem 2.5rem;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.75;
+  border-left: 5px solid #e0aa3e;
+  background: white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease-out;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.refund-policy:hover {
+  border-color: #c78f1e;
+}
+
+.refund-policy__title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: #e0aa3e;
+  margin-bottom: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: left;
+  border-bottom: 3px solid #e0aa3e;
+  padding-bottom: 0.3rem;
+}
+
+.refund-policy__subtitle {
+  font-size: 1.3rem;
+  color: #b27f1f;
+  margin: 2rem 0 1rem 0;
+  font-weight: 700;
+  text-align: left;
+  position: relative;
+  padding-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+.refund-policy__subtitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #e0aa3e 0%, #c78f1e 100%);
+  border-radius: 4px;
+  box-shadow: 0 0 8px #e0aa3e80;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.refund-policy__subtitle:hover::after {
+  width: 20%; /* grow width smoothly */
+}
+
+.refund-policy__paragraph {
+  font-size: 1rem;
+  margin-bottom: 1.4rem;
+  color: #444;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.refund-policy__list {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.refund-policy__list-item {
+  position: relative;
+  margin-bottom: 1.2rem;
+  padding-left: 1.6rem;
+  font-size: 1rem;
+  color: #444;
+  cursor: default;
+  transition: color 0.3s ease;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.refund-policy__list-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 8px;
+  height: 8px;
+  background: #e0aa3e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #e0aa3e88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.refund-policy__list-item:hover {
+  color: #a57e00;
+}
+
+.refund-policy__list-item:hover::before {
+  transform: scale(1.4);
+  box-shadow: 0 0 16px #c78f1e;
+}
+
+.refund-policy__list-item strong {
+  color: #a57e00;
+  font-weight: 700;
+}
+
+/* Sublist */
+.refund-policy__sublist {
+  list-style: none;
+  padding-left: 1.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.refund-policy__sublist-item {
+  position: relative;
+  margin-bottom: 0.9rem;
+  padding-left: 1.4rem;
+  font-size: 1rem;
+  color: #555;
+  cursor: default;
+  transition: color 0.3s ease;
+}
+
+.refund-policy__sublist-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #e0aa3e;
+  border-radius: 3px;
+  box-shadow: 0 0 6px #e0aa3e77;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.refund-policy__sublist-item:hover {
+  color: #8a6f00;
+}
+
+.refund-policy__sublist-item:hover::before {
+  border-color: #c78f1e;
+  box-shadow: 0 0 10px #c78f1e;
+}
+
+.refund-policy__sublist-item strong {
+  color: #a57e00;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .refund-policy {
+    padding: 1.5rem 1.8rem;
+  }
+
+  .refund-policy__title {
+    font-size: 1.5rem;
+  }
+
+  .refund-policy__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .refund-policy__list-item {
+    font-size: 1rem;
+    padding-left: 1.3rem;
+  }
+
+  .refund-policy__list-item::before {
+    width: 10px;
+    height: 10px;
+    top: 0.6em;
+  }
+
+  .refund-policy__sublist-item {
+    font-size: 0.95rem;
+    padding-left: 1.1rem;
+  }
+
+  .refund-policy__sublist-item::before {
+    width: 7px;
+    height: 7px;
+    top: 0.45em;
+  }
+}
