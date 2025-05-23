@@ -54,10 +54,8 @@ const Footer = () => {
                 <li><a href="/contact-us">Contact Us</a></li>
                 <li><a href="/product-pricing">Product Pricing</a></li>
                 <li><a href="/points-system">Points System</a></li>
-<<<<<<< HEAD
                 <li><a href="/play-guide">How to play</a></li>
-=======
->>>>>>> 1f811f2786f537453165dfaf2d6da86abd61bcff
+
               </ul>
             </div>
           </div>
